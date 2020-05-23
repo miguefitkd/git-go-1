@@ -1,0 +1,291 @@
+CAPITULO 1
+    INTRO
+	- Infraestructura dentro de las empresas...
+	- Lenguaje de Programacion Open Source
+	- Caracteristicas/Ventajas
+	  Sintaxis estandarizada
+	  Compilador forza a seguir buenas practicas
+	  Compilador muy rapido
+	  Soporte por concurrencia y facil de manejar (sintaxis muy sencilla)
+	  Facil de levantar un servidor web (libreria HTTP)
+	  Performance alto. Compila a lenguaje maquina. Es un poquito mas lento que C porque tiene un garbage collector
+	  Se sube el binario a produccion y sale andando
+	- Utilidades  
+	  CLI TOOLS (command line tools), cosas que usamos por linea de comando que nos ayudan a automatizar un monton de cosas, infraestructura en el Backend
+	  Herramientas internas de Software, Servicios WEB, tambien sirve para hacer aplicaciones web.
+    - GO no es un lenguaje orientado a objetos.
+
+CAPITULO 2 - INSTALACION Y HOLA MUNDO
+	url: https://golang.org/
+	Descargar el ejecutable. Instalarlo.
+	Una alternativa es la consola online. Tiene ciertas limitaciones obviamente.
+
+	SINTAXIS
+	- Debe existir el "package main"
+	- Los imports tienen la libreria a importar entre comillas dobles "fmt" (para los print)
+	- Siempre debe existir un func main() {...}
+	- No es necesario agregar ";" al final de cada linea
+
+	COMPILAR: 
+	- go build [nombre_archivo].go
+	- Te genera un [nombre_archivo].exe
+
+	EJECUTAR
+	- Windows(consola): [nombre_archivo].exe
+	- Linux(consola): ./[nombre_archivo]
+
+CAPITULO 3 - VARIABLES
+	Lenguaje fuertemente tipeado.
+	- var [nombre_variable_1, ... , nombre_variable_n] [tipo_de_dato]
+	- Tipado dinamico de GO, Operador ":=", la ventaja esta en que no se define el tipo de dato, se define el tipo de dato en tiempo de ejecucion en base al valor asignado.
+	  Ejemplo: 
+			  x := 23
+	  
+	- Las variables siempre estan inicializadas,
+	  int -----> 0
+	  string --> cadena vacia
+	  bool ----> falso
+	- Hay arreglos, otras cosas de slices...
+	- Cuando las variables no se utilizan no compila.
+	- Una variable no puede volver a ser definida, error de compilacion
+
+	CORRER DIRECTAMENTE
+	- go run [nombre_archivo].go
+
+CAPITULO 4 (Conversion de tipos, casteos)
+    SINTAXIS
+	- Importar multiples paquetes (tambien se pueden declarar de forma individual)
+	  import(
+	    "fmt"
+		"strconv"
+	  )
+	  - No se puede hacer un import de una libreria que no se este utilizando
+	  - Una funcion de GO puede retornar mas de 1 valor de retorno (para descartarlo usar "_")
+	CONVERCIONES ("strconv")
+	- Itoa --> int a string
+	- Atoi --> string a int
+	- Para el fmt.Println no se pueden mezclar tipos.
+		CODIGO ---> fmt.Println("Mi edad es: " + edad)
+		ERROR ----> (type untyped string) as type int
+	    SOLUCION -> edad_str := strconv.Itoa( edad )
+
+CAPITULO 5 (Leer e imprimir datos)
+    SINTAXIS
+	- Comillas simples definen un caracter
+	- Comillas dobles definen una cadena
+	- nil es NULL
+	
+    IMPRIMIR
+    - fmt.Print("Hola Mundo!")
+    - fmt.Println("Hola Mundo!")
+	- fmt.Printf("Mi edad es: %d", edad)
+	  %s --> imprime un string
+      %d --> decimal
+	  %v --> es una especie de comodin, te retorna el valor por default, se puede usar con tranquilidad para los tipos basicos
+	  %f --> Para los doubles, float, etc
+	LEER
+	- fmt.Scanf: agregar el salto de linea al final, pasarle el puntero de la variable.
+	             si la entrada se define como %v se va a manejar como si fuese un %s
+				 fmt.Scanf("%d\n", &[variable_int]) el \n define el caracter de fin de lectura.
+    - "bufio", "os":
+	             reader := 
+
+CAPITULO 6 (Condicionales)
+    SINTAXIS
+    - Los parentesis del if son opcionales.
+	- Las llaves del if son obligatorias
+	- Las llaves de inicio ({) siempre en la misma linea del if
+	- if / else if / else
+
+CAPITULO 7 (Ciclos / Unico ciclo --> for)
+    SINTAXIS
+    - for [inicializacion];[condicion del fin];[cada vez que el ciclo termina] {
+	       ....
+	  }
+    - Se puede simular un while utilizando solo la [condicion del fin]
+	- break / continue funcionan de igual manera
+
+CAPITULO 8 (Arreglos y Matrices)
+    - var [nombre_variable] [n][tipo]
+	  Se inicializa con los valores por default
+	  ej: var arreglo [10]int
+	- se pueden inicializar, las posiciones no inicializadas toman el valor por default
+	  arreglo2 := [10]int{1,2,3,4}
+	- se puede imprimir todo el array
+	  fmt.Println( [array] )
+	  ej: fmt.Println(arreglo2)
+	- se pueden armar matrices
+	  var [nombre_variable] [long_1][long_2][tipo]
+	  ej: var matrix [2][3]int
+	      Dos arreglos de 3 elementos...
+
+CAPITULO 9 (Slices)
+    SINTAXIS
+    - Estructura construida en base a un array
+	- Los slices se pueden icializar, cuando no estan inicializados son nil(NULL)
+	- Los slices se pueden redimensionar
+	  var [nombre_variable][][tipo_de_dato]
+	  ej: var sliceVacio []int
+	      sliceInicializado := []int{1,2,3,4}
+    - Estructura de un slice contiene 3 datos [ptero|longitud|capacidad]
+	- Se puede crear un slice en base a un array (slicing)
+	  arreglo := [4] int {1,2,3,4}
+	  slice := arreglo[:2]     // Se toma hasta la posicion 2 (no inclusivo), desde del inicio
+	  slice := arreglo[1:2]    // Se toma de la posicion 1 hasta la posicion 2 (no inclusivo)
+	  El maximo valor es el tamanio del array
+
+CAPITULO 10 (Make y Append)
+    SINTAXIS
+    - Make --> crea un slice, la capacidad_del_slice no es requerida.
+	  make([][tipo_del_slice],[longitud_del_slice],[capacidad_del_slice])
+	  ej --> make([]int,3)
+	         make([]int,3, 5)
+			 make([]int,0) // slice con array de logitud cero
+	- Append --> Agregar un nuevo elemento a la array interno.
+	             Modifica la longitud del slice
+	             Cuando se llega al limite de la capicidad esta se autoincrementa al igual que la longitud.
+	             Cuando un slice desborda su capacidad, construye un nuevo slice...
+	
+	ESTRUCTURA DEL SLICE --> [ptero|longitud|capacidad]
+	ptero: Puntero al arreglo interno
+	longitud: El tamaño del arreglo interno
+	capacidad: Cual es la capacidad del slice
+
+CAPITULO 11 (Copy)
+    - copy(destino, fuente)
+	  La funcion copy copia el minimo de elementos de los dos slices.
+	- Truco, utilizar la longitud del slice de origen de los datos
+	  slice1 := []int{1,2,3,4}
+	  slice2 := make([]int,len(slice1))
+	- Se suele duplicar la capacidad
+
+CAPITULO 12 (Punteros)
+    SINTAXIS
+    - *[tipo_de_dato]
+	  ej: var puntero *int
+    - El valor cero (0) is nil (NULL)
+	- Para obtener la direccion de memoria --> &[variable]
+	- Acceder a la variable apuntada por el puntero --> *[puntero]
+	
+CAPITULO 13 (Structs)
+    - type [nombre_variable] struct {
+	         edad int
+             nombre string
+             apellido string
+	  }
+	- Se inicializas los elementos del struct
+	- Creacion con inicializacion
+	  usuario1 := User{nombre : "Miguel Angel", apellido: "Cisneros"}
+	  usuario2 := User{22, "Miguel Angel", "Da Vinci"} (especificar en orden cada dato)
+	  ptero_usuario3 := new(User)    (esto retorna un puntero a la estructura)
+	- Acceso a elementos de la estructura mediante el "."
+	  [nombre_variable].[nombre_campo_del_struct]
+
+CAPITULO 14 (Metodos- Agregando metodos a las estructuras)
+    Solo se pueden agregar metodos a las estructuras propias, no asi a las estructuras de otros packages.
+    SINTAXIS
+	- func ([nombre_variable] [nombre_struct_dueño_de_funcion]) [nombre_funcion]() [tipo_de_dato_retorno] { ... }
+      Se pueden agregar metodos a las estructuras...
+	  Ej: func (usuario User) nombre_completo() string { ... }
+	- IMPORTANTE:
+	  Cada vez que se pasa un argumento a una funcion, este ARGUMENTO se pasa como una COPIA, es decir que SE DUPLICA el objeto y se envia
+	  Se puede recibir un puntero en lugar de un struct
+	  Ej: func (this *User) set_nombre(nuevoNombre string) { ... }
+	  Al pasarle un puntero es mas performante...
+
+CAPITULO 15 (Campos anonimos para las estructuras)
+    - Los campos anonimos permiten replicar el comportamiento de la herencia en lenguajes orientados a objetos
+	SINTAXIS
+	- type [nombre_struct_1] struct { ... }
+	- type [nombre_struct_2] struct { [nombre_struct_1] ... }
+	ej:
+	    type Human struct {
+            edad int
+            nombre string
+            apellido string
+        }
+        
+        type Tutor struct {
+            Human
+        }
+    - Para acceder se usa el "."
+	- Cuando hayan mas de un tipo en la estructura final puede ser que se repitan campos, 
+	  asi que se puede utilizar la forma [nombre_variable].[nombre_struct_1].[campo]
+	  ej: tutorN.Human.edad
+	- Se puede agregar funciones relacionadas a las distintas estructuras e ir llamando a los metodos de la estructura que se desee utilizando el "."
+
+CAPITULO 16 (Interfaces)
+    SINTAXIS: type User  interface { 
+	              [nombre_metodo]() [tipo_de_dato_devuelto]
+			      [nombre_metodo]() [tipo_de_dato_devuelto]
+			  }
+	ej: type User  interface {
+            Permisos() int
+			Nombre() string
+        }
+      
+    - Interfaz: Estructura que define metodos que no estan implementados.
+	            Es un tipo de dato
+	- Las interfaces se pueden implementar relacionados a una estructura
+	- No hay una palabra reservada para la implementacion de las interfaces, con el solo hecho de estar los metodos es suficiente.
+	- Se puede utilizar estructuras como interfaces, para obtener polimorfismo :P 
+	- Se puede trabajar con arreglos/slices con elementos del tipo de la interfaz (polimorfismo)
+
+CAPITULO 17 (GO Routines)
+    - Palabra reservado: "go" + ejecucion de la funcion...
+	  La palabra "go" mueve la ejecucion de la funcion a una GO routine. Una ejecucion separada.
+	  GO no utiliza los Threads del sistema, utiliza lo que se llama GO routines, en una computadora hay un limite de Threads del sistema que se pueden utilizar.
+	  Puedo tener miles de GO Routines sin que se bloquee, lo que se hace es abrir un nuevo Thread solo cuando multiples GO routines se estan bloquean.
+	  Ejemplos de bloqueos: esperando la entrada de datos de un usuario, llamada a un sleep.
+	  Go routines son performantes. El Compilador se encarga de abrirlas y terminarlas.
+	  
+	  Esto puede causar que el programa finalice antes de terminar con todas las operaciones a ejecutar.
+      Para evitar la finalizacion temprana:
+	      // Hack para que no termine el programa...
+	      // El programa no termina hasta que le de enter
+	      var wait string 
+	      fmt.Scanln(&wait)
+    - Sleep: time.Sleep( 1000 * time.Millisecond)
+	- funciones anonimas para bloques de codigo especificos que se requiere que sea manejado de forma concurrente
+        go func(){
+            bloque de codigo que se ejecuta en paralelo...
+        } ()
+
+CAPITULO 18 (GO Channels)
+    
+	SINTAXIS: make(chan [tipo_de_dato])
+	ej: channel := make(chan string)
+	
+    - Permiten comunicar go routines.
+	- Forma de enviar: [canal] <- [dato]
+
+CAPITULO 19 (Leer Archivos V1 | Libreria "io/ioutil")
+    - Abrir archivo y cargar todo el contenido de la memoria
+	- [variable_con_informacion_en_bytes],[error] = ioutil.ReadFile([path_del_archivo])
+	  Si [error] es distinto de nil entonces se produjo un error
+
+CAPITULO 20 (Leer Archivos V2 | Librerias: "bufio", "os")
+    - Leer el contenido linea por linea
+	- [variable_con_informacion_en_bytes],[error] = os.Open([path_del_archivo])
+	- [variable_scanner] := bufio.NewScanner([variable_con_informacion_en_bytes])
+	- [variable_linea_archivo_str] := [variable_scanner].Text()
+    - cerrar el archivo
+	
+CAPITULO 21 (Defer)
+    - Terminacion abrupta de la ejecucion o return antes de lo esperado.
+	- defer: Agrega la ejecucion de una linea de codigo al stack de funciones que se deben ejecutar cuando el la funcion actual retorna
+	- Sirve para asegurarse de que siempre se ejecute una linea de codigo.
+	  Similar al funcionamiento del finally (un poco similar)
+	ej:
+	  defer archivo.close()
+
+CAPITULO 22 (Panic y Recover)
+    - panic() : Te muestra el error y el stack del error
+	            Permite imprimir un error para poder identificar en que linea se produjo el error
+				"defer" se ejecuta aunque haya un panic(...)
+	ej:
+	  panic(err)
+    - recover(): se utiliza para detener un panic(), se puede utilizar junto con el "defer"
+
+
+
