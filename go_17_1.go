@@ -2,14 +2,14 @@ package main
 
 import (
     "fmt"
-	"time"
-	"strings"
+    "time"
+    "strings"
 )
 
 func main(){
-    fmt.Println("Ejecutando operacion de forma secuencial.")
-	mi_nombre_lento("Miguel")
-    fmt.Println()
+        fmt.Println("Ejecutando operacion de forma secuencial.")
+        mi_nombre_lento("Miguel")
+        fmt.Println()
 	fmt.Println("Al fin termino...")
 	fmt.Println()
 	fmt.Println("Ejecutando operacion de forma concurrente ('go').")

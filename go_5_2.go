@@ -9,7 +9,7 @@ import (
 // Leer e imprimir datos
 
 func main() {
-    // Hay que indicarle que lector tiene que utilizar
+	// Hay que indicarle que lector tiene que utilizar
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Ingresa tu nombre: ")
 	// Definir el caracter de finalizacion

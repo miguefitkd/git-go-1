@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-    var sliceVacio []int
+	var sliceVacio []int
 	fmt.Println(sliceVacio)
 	if sliceVacio == nil {
 	    fmt.Println("El slice esta vacio")

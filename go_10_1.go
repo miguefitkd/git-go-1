@@ -7,7 +7,7 @@ import (
 func main(){
     
 	// No se le pasa la capacidad
-    slice1 := make([]int,3)
+        slice1 := make([]int,3)
 	fmt.Println( slice1 )
 	fmt.Printf("Longitud del slice1: %d\n", len(slice1) )
 	fmt.Printf("Capacidad del slice1: %d\n", cap(slice1) )
@@ -15,7 +15,7 @@ func main(){
 	fmt.Println()
 	
 	// Ahora le paso una capacidad
-    slice2 := make([]int,3, 5)
+        slice2 := make([]int,3, 5)
 	fmt.Println( slice2 )
 	fmt.Printf("Longitud del slice2: %d\n", len(slice2) )
 	fmt.Printf("Capacidad del slice2: %d\n", cap(slice2) )

@@ -12,7 +12,7 @@ func main() {
 	// nombre := "Hola chavo!"
 	// 
 	// # command-line-arguments
-    // .\go_3_1.go:12:9: no new variables on left side of :=
+        // .\go_3_1.go:12:9: no new variables on left side of :=
 	// 
 	
 	fmt.Println(nombre)
