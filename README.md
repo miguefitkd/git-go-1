@@ -1,5 +1,6 @@
 # git-go-1
 Pruebas de git/github y go
+
 CAPITULO 1
     INTRO
         - Infraestructura dentro de las empresas...
@@ -521,4 +522,5 @@ CAPITULO 26 (Creacion de packages LOCALES)
          - Funciones publica  --> El nombre comienza con mayuscula
          - Atributos privados --> El nombre comienza con minuscula
          - Atributos publicos --> El nombre comienza con mayuscula
+
 
