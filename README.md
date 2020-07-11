@@ -549,9 +549,9 @@ http.ListenAndServe(":8080", nil)
 ```
 
 ## CAPITULO 25 (JSON / "encoding/json")
- *  json.NewEncoder( un variable del tipo http.ResponseWriter).Encode( var_tipo_struct )
- * Por convension de GO con respecto a JSON, los campos de un struct con nombres que comiencen con minusculas no se tienen en cuenta.
- * Se puede modificar el "title" con el que se va a ver un campo de un struct, mediante la siguiente notacion...
+*  json.NewEncoder( un variable del tipo http.ResponseWriter).Encode( var_tipo_struct )
+* Por convension de GO con respecto a JSON, los campos de un struct con nombres que comiencen con minusculas no se tienen en cuenta.
+* Se puede modificar el "title" con el que se va a ver un campo de un struct, mediante la siguiente notacion...
 ```go
 type [nombre_struct] struct {
 //  ...
@@ -561,7 +561,7 @@ type [nombre_struct] struct {
 ```
 
 ###### OTRAS COSAS
- * En GO, cuando se utilizan arreglos de tipos, es necesario agregar una coma por elemento de la inicializacion. En otros leguajes el ultimo elemento no lleva "coma".
+* En GO, cuando se utilizan arreglos de tipos, es necesario agregar una coma por elemento de la inicializacion. En otros leguajes el ultimo elemento no lleva "coma".
 ```go
 type Curso struct {
     Title string       `json:"nombre_profesor"`
@@ -578,16 +578,16 @@ cursos := Cursos{
 
 ## CAPITULO 26 (Creacion de packages LOCALES) 
 ###### SINTAXIS
- * Crear directorio con el nombre del package a crear
- * Dentro del package crear un archivo .go que tendra la funcionalidad del package(el nombre puede variar con respecto al nombre del package)
- * Las librerias no se pueden ejecutar de forma independiente. No tienen una funcion main.
- * Las funciones privadas no se pueden acceder desde packages externos
- * La funcion init() preconfigura el package para que tenga toda la informacion que requiera
- * Los atributos publicos se pueden acceder desde otros packages
+* Crear directorio con el nombre del package a crear
+* Dentro del package crear un archivo .go que tendra la funcionalidad del package(el nombre puede variar con respecto al nombre del package)
+* Las librerias no se pueden ejecutar de forma independiente. No tienen una funcion main.
+* Las funciones privadas no se pueden acceder desde packages externos
+* La funcion init() preconfigura el package para que tenga toda la informacion que requiera
+* Los atributos publicos se pueden acceder desde otros packages
 ###### OTRAS COSAS
- * Funciones privadas --> El nombre comienza con minuscula
- * Funciones publica  --> El nombre comienza con mayuscula
- * Atributos privados --> El nombre comienza con minuscula
- * Atributos publicos --> El nombre comienza con mayuscula
+* Funciones privadas --> El nombre comienza con minuscula
+* Funciones publica  --> El nombre comienza con mayuscula
+* Atributos privados --> El nombre comienza con minuscula
+* Atributos publicos --> El nombre comienza con mayuscula
 
 
