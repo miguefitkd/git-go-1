@@ -670,3 +670,9 @@ cursos := Cursos{
 
 ###### EJEMPLOS
 * :computer: *[packages locales](https://github.com/miguefitkd/git-go-1/blob/master/go_26_1.go)*
+
+## VARIAS PRUEBAS
+###### EJEMPLOS
+* :computer: *[pruebas 1](https://github.com/miguefitkd/git-go-1/blob/master/go_con_ej_1.go)*
+* :computer: *[pruebas 2](https://github.com/miguefitkd/git-go-1/blob/master/go_con_ej_2.go)*
+
