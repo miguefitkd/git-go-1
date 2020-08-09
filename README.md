@@ -21,7 +21,7 @@
 * url: https://golang.org/
 * Descargar el ejecutable. Instalarlo.
 * Una alternativa es la consola online. Tiene ciertas limitaciones obviamente.
-* *[Ejemplo - hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_2_1.go)*
+* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_2_1.go)*
 
 ###### SINTAXIS
 * Debe existir el "package main"
