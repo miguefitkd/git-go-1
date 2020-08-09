@@ -1,21 +1,23 @@
-package main
+package curso1
 
 import (
-    "net/http"
-    "fmt"
+	"fmt"
+	"net/http"
 )
 
-func main() {
-    // Parte de la url
-    // Handler
-    http.HandleFunc(
-                    "/", 
-                    func(w http.ResponseWriter, r *http.Request) {
-                        fmt.Println("PATH: " + r.URL.Path)
-                        // http.ServeFile(w, r, "index.html")
-                        http.ServeFile(w, r, r.URL.Path[1:])
-    })
+// ExecuteGoCap24Ej1 hace tal cosa.
+func ExecuteGoCap24Ej1() {
+	fmt.Printf("\n\nExecuteGoCap24Ej1 <=== ****\n")
 
-    http.ListenAndServe(":8080", nil)
-    
+	// Parte de la url
+	// Handler
+	http.HandleFunc(
+		"/",
+		func(w http.ResponseWriter, r *http.Request) {
+			fmt.Println("PATH: " + r.URL.Path)
+			// http.ServeFile(w, r, "index.html")
+			http.ServeFile(w, r, r.URL.Path[1:])
+		})
+
+	http.ListenAndServe(":8080", nil)
 }

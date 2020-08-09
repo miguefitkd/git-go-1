@@ -1,0 +1,13 @@
+package curso1
+
+import (
+	"fmt"
+
+	"github.com/miguefitkd/go_git/curso1/mypackage"
+)
+
+// ExecuteGoCap26Ej1 hace tal cosa.
+func ExecuteGoCap26Ej1() error {
+	fmt.Println(mypackage.HolaMundo())
+	return nil
+}

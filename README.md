@@ -406,7 +406,7 @@ func auth(user User) string{
 * :computer: *[interfaces](https://github.com/miguefitkd/git-go-1/blob/master/go_16_1.go)*
 
 
-## CAPITULO 17 (GO Routines / ejecuciones corruntes / Threads en java)
+## CAPITULO 17 (GO Routines / ejecuciones concurrentes / Como threads en java?)
 ###### SINTAXIS
 * go [nombre_funcion([parametros_de_funcion])]
 ```go

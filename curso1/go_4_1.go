@@ -1,21 +1,24 @@
-package main
+package curso1
 
 import (
-  "fmt"
-  "strconv"
+	"fmt"
+	"strconv"
 )
 
-func main() {
+// ExecuteGoCap4Ej1 hace tal cosa.
+func ExecuteGoCap4Ej1() {
+	fmt.Printf("\n\nExecuteGoCap4Ej1() <=== ****\n")
+
 	edad := 36
 	fmt.Println(edad)
-	
+
 	// (type untyped string) as type int
 	// fmt.Println("Mi edad es: " + edad)
-	
-	edad_str := strconv.Itoa( edad )
-	fmt.Println("Mi edad es: " + edad_str)
-	
+
+	edadStr := strconv.Itoa(edad)
+	fmt.Println("Mi edad es: " + edadStr)
+
 	// El segundo valor es el error.
-	edad_int,_ := strconv.Atoi( edad_str )
-	fmt.Println(edad_int + 10)
+	edadInt, _ := strconv.Atoi(edadStr)
+	fmt.Println(edadInt + 10)
 }
