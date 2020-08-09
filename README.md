@@ -661,12 +661,12 @@ cursos := Cursos{
 * Las funciones privadas no se pueden acceder desde packages externos
 * La funcion init() preconfigura el package para que tenga toda la informacion que requiera
 * Los atributos publicos se pueden acceder desde otros packages
+
 ###### OTRAS COSAS
 * Funciones privadas --> El nombre comienza con minuscula
 * Funciones publica  --> El nombre comienza con mayuscula
 * Atributos privados --> El nombre comienza con minuscula
 * Atributos publicos --> El nombre comienza con mayuscula
-
 
 ###### EJEMPLOS
 * :computer: *[packages locales](https://github.com/miguefitkd/git-go-1/blob/master/go_26_1.go)*
