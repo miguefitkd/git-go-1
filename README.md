@@ -240,7 +240,7 @@ slice_int = append(slice_int, 2)
 * capacidad: Cual es la capacidad del slice
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_10_1.go)*
+* :computer: *[make and append](https://github.com/miguefitkd/git-go-1/blob/master/go_10_1.go)*
 
 ## CAPITULO 11 (Copy)
 ###### SINTAXIS
@@ -259,7 +259,7 @@ slice2 := make([]int,len(slice1), cap(slice1)*2)
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_11_1.go)*
+* :computer: *[slices - copy](https://github.com/miguefitkd/git-go-1/blob/master/go_11_1.go)*
 
 ## CAPITULO 12 (Punteros)
 ###### SINTAXIS
@@ -272,7 +272,7 @@ var puntero *int
 * Acceder a la variable apuntada por el puntero --> *[puntero]
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_12_1.go)*
+* :computer: *[pointers](https://github.com/miguefitkd/git-go-1/blob/master/go_12_1.go)*
 
 ## CAPITULO 13 (Structs)
 ###### SINTAXIS
@@ -296,7 +296,7 @@ ptero_usuario3 := new(User)                      // retorna un puntero a la estr
 * Acceso a elementos de la estructura mediante punteros, tambien se puede usar la forma anterior --> (*[nombre_ptero]).[nombre_campo_del_struct]
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_13_1.go)*
+* :computer: *[structs](https://github.com/miguefitkd/git-go-1/blob/master/go_13_1.go)*
 
 ## CAPITULO 14 (Metodos* Agregando metodos a las estructuras)
 ###### SINTAXIS
@@ -323,7 +323,7 @@ func (this *User) set_nombre(nuevoNombre string) { ... }
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_14_1.go)*
+* :computer: *[structs and methods](https://github.com/miguefitkd/git-go-1/blob/master/go_14_1.go)*
 
 ## CAPITULO 15 (Campos anonimos para las estructuras)
 ###### SINTAXIS
@@ -359,7 +359,7 @@ func (this Tutor) hablar() string {
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_15_1.go)*
+* :computer: *[campos anonimos](https://github.com/miguefitkd/git-go-1/blob/master/go_15_1.go)*
 
 ## CAPITULO 16 (Interfaces)
 ###### SINTAXIS
@@ -403,7 +403,7 @@ func auth(user User) string{
 * Se puede trabajar con arreglos/slices con elementos del tipo de la interfaz (polimorfismo)
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_16_1.go)*
+* :computer: *[interfaces](https://github.com/miguefitkd/git-go-1/blob/master/go_16_1.go)*
 
 
 ## CAPITULO 17 (GO Routines / ejecuciones corruntes / Threads en java)
@@ -445,7 +445,7 @@ time.Sleep(1000 + time.Millisecond)
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_17_1.go)*
+* :computer: *[go routines](https://github.com/miguefitkd/git-go-1/blob/master/go_17_1.go)*
 
 ## CAPITULO 18 (GO Channels)
 ###### SINTAXIS
@@ -469,7 +469,7 @@ fmt.Println(msg)
 * Forma de recibir: [var_recibiendo] = <- [canal]
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_18_1.go)*
+* :computer: *[go channels](https://github.com/miguefitkd/git-go-1/blob/master/go_18_1.go)*
 
 ## CAPITULO 19 (Leer Archivos V1 | Libreria "io/ioutil")
 ###### SINTAXIS
@@ -485,7 +485,7 @@ if err == nil {
 * La informacion recibida esta en bytes, es necesario convertir la informacion
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_19_1.go)*
+* :computer: *[read files 1](https://github.com/miguefitkd/git-go-1/blob/master/go_19_1.go)*
 
 ## CAPITULO 20 (Leer Archivos V2 | Librerias: "bufio", "os")
 ###### SINTAXIS
@@ -506,7 +506,7 @@ if err == nil {
 * Es necesario abrir y cerrar el archivo
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_20_1.go)*
+* :computer: *[read files 2](https://github.com/miguefitkd/git-go-1/blob/master/go_20_1.go)*
 
 ## CAPITULO 21 (Defer)
 ###### SINTAXIS
@@ -527,7 +527,7 @@ defer func() {
 * Similar al funcionamiento del finally (un poco similar)
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_21_1.go)*
+* :computer: *[defer](https://github.com/miguefitkd/git-go-1/blob/master/go_21_1.go)*
 
 ## CAPITULO 22 (Panic y Recover)
 ###### SINTAXIS
@@ -545,7 +545,7 @@ defer func() {
   *Similar a un catch?
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_22_1.go)*
+* :computer: *[panic and recover](https://github.com/miguefitkd/git-go-1/blob/master/go_22_1.go)*
 
 ## CAPITULO 23 (WEB / net/http, io)
 * Sintaxis 1
@@ -581,7 +581,7 @@ func nombre_de_la_funcion(w http.ResponseWriter, r *http.Request){
   * En el segundo parametro es nil para que se utilicen los manejadores definidos con http.HandlerFunc(...)
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_23_1.go)*
+* :computer: *[web 1](https://github.com/miguefitkd/git-go-1/blob/master/go_23_1.go)*
 
 ## CAPITULO 24 (WEB / Servir un archivo y un directorio)
 * Sintaxis 1
@@ -619,8 +619,8 @@ http.ListenAndServe(":8080", nil)
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_24_1.go)*
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_24_2.go)*
+* :computer: *[web 2 1](https://github.com/miguefitkd/git-go-1/blob/master/go_24_1.go)*
+* :computer: *[web 2 2](https://github.com/miguefitkd/git-go-1/blob/master/go_24_2.go)*
 
 ## CAPITULO 25 (JSON / "encoding/json")
 *  json.NewEncoder( un variable del tipo http.ResponseWriter).Encode( var_tipo_struct )
@@ -651,7 +651,7 @@ cursos := Cursos{
 ```
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_25_1.go)*
+* :computer: *[json](https://github.com/miguefitkd/git-go-1/blob/master/go_25_1.go)*
 
 ## CAPITULO 26 (Creacion de packages LOCALES) 
 ###### SINTAXIS
@@ -669,4 +669,4 @@ cursos := Cursos{
 
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_26_1.go)*
+* :computer: *[packages locales](https://github.com/miguefitkd/git-go-1/blob/master/go_26_1.go)*
