@@ -62,7 +62,7 @@ x := 23
 * go run [nombre_archivo].go
 
 ###### EJEMPLOS
-* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_3_1.go)*
+* :computer: *[variables](https://github.com/miguefitkd/git-go-1/blob/master/go_3_1.go)*
 
 ## CAPITULO 4 (Conversion de tipos, casteos)
 ###### SINTAXIS
@@ -77,7 +77,7 @@ import(
 * Una funcion de GO puede retornar mas de 1 valor de retorno (para descartarlo usar "_"). 
   * **Multiple values strconv.Atoi(...) in simple value contex** significa que se estan devolviendo mas valores de los que estas esperando.
 
-###### CONVERCIONES ("strconv")
+###### CONVERSIONES ("strconv")
 * Itoa --> int a string --> var_str = strconv.Itoa(var_int)
 * Atoi --> string a int --> var_int, _ = str
 * Para el fmt.Println no se pueden mezclar tipos.
@@ -86,7 +86,7 @@ import(
   * SOLUCION -> edad_str := strconv.Itoa( edad )
 
 ###### EJEMPLOS
-* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_4_1.go)*
+* :computer: *[conversion](https://github.com/miguefitkd/git-go-1/blob/master/go_4_1.go)*
 
 ## CAPITULO 5 (Leer e imprimir datos)
 ###### SINTAXIS
@@ -119,12 +119,20 @@ if (err != nil) { // Cuando todo esta bien err es nil
 } 
 ```
 
+###### EJEMPLOS
+* :computer: *[leer e imprimir 1](https://github.com/miguefitkd/git-go-1/blob/master/go_5_1.go)*
+* :computer: *[leer e imprimir 2](https://github.com/miguefitkd/git-go-1/blob/master/go_5_2.go)*
+
+
 ## CAPITULO 6 (Condicionales)
 ###### SINTAXIS
 * Los parentesis del if son opcionales.
 * Las llaves del if son obligatorias
 * Las llaves de inicio ({) siempre en la misma linea del if
 * if / else if / else
+
+###### EJEMPLOS
+* :computer: *[condicionales](https://github.com/miguefitkd/git-go-1/blob/master/go_6_1.go)*
 
 ## CAPITULO 7 (Ciclos / Unico ciclo --> for)
 ###### SINTAXIS
@@ -137,6 +145,9 @@ for [inicializacion];[condicion del fin];[cada vez que el ciclo termina] {
 ```
 * Se puede simular un while utilizando solo la [condicion del fin]
 * break / continue funcionan de igual manera
+
+###### EJEMPLOS
+* :computer: *[for](https://github.com/miguefitkd/git-go-1/blob/master/go_7_1.go)*
 
 ## CAPITULO 8 (Arreglos y Matrices)
 ###### SINTAXIS
@@ -166,6 +177,10 @@ arreglo2[index]
 // Dos arreglos de 3 elementos...
 var matrix [2][3]int
 ```
+
+###### EJEMPLOS
+* :computer: *[arreglos y matrices](https://github.com/miguefitkd/git-go-1/blob/master/go_8_1.go)*
+
 
 ## CAPITULO 9 (Slices)
 ###### SINTAXIS
@@ -197,6 +212,9 @@ slice := arreglo[1:2]    // Se toma de la posicion 1 hasta la posicion 2 (no inc
 * Longitud del slice:  len(var_slice)
 * Capacidad del slice: cap(var_slice)
 * La capacidad en mayor o igual a la longitud
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_8_1.go)*
 
 ## CAPITULO 10 (Make y Append)
 ###### SINTAXIS
