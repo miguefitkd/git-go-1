@@ -214,7 +214,7 @@ slice := arreglo[1:2]    // Se toma de la posicion 1 hasta la posicion 2 (no inc
 * La capacidad en mayor o igual a la longitud
 
 ###### EJEMPLOS
-* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_8_1.go)*
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_9_1.go)*
 
 ## CAPITULO 10 (Make y Append)
 ###### SINTAXIS
@@ -239,6 +239,9 @@ slice_int = append(slice_int, 2)
 * longitud:  La longitud del arreglo interno
 * capacidad: Cual es la capacidad del slice
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_10_1.go)*
+
 ## CAPITULO 11 (Copy)
 ###### SINTAXIS
 * var_copy = copy(destino, fuente)
@@ -255,6 +258,9 @@ slice1 := []int{1,2,3,4}
 slice2 := make([]int,len(slice1), cap(slice1)*2)
 ```
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_11_1.go)*
+
 ## CAPITULO 12 (Punteros)
 ###### SINTAXIS
 * *[tipo_de_dato]
@@ -264,7 +270,10 @@ var puntero *int
 * El valor cero (0) is nil (NULL)
 * Para obtener la direccion de memoria --> &[variable]
 * Acceder a la variable apuntada por el puntero --> *[puntero]
-	
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_12_1.go)*
+
 ## CAPITULO 13 (Structs)
 ###### SINTAXIS
 * Struct
@@ -285,6 +294,9 @@ ptero_usuario3 := new(User)                      // retorna un puntero a la estr
 ```
 * Acceso a elementos de la estructura mediante el "." --> [nombre_variable].[nombre_campo_del_struct]
 * Acceso a elementos de la estructura mediante punteros, tambien se puede usar la forma anterior --> (*[nombre_ptero]).[nombre_campo_del_struct]
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_13_1.go)*
 
 ## CAPITULO 14 (Metodos* Agregando metodos a las estructuras)
 ###### SINTAXIS
@@ -309,6 +321,9 @@ func (this *User) set_nombre(nuevoNombre string) { ... }
 // Al pasarle un puntero es mas performante frente a structs grandes.
 // Si se modifica la informacion de la estructura se va a estar modificando el struct original
 ```
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_14_1.go)*
 
 ## CAPITULO 15 (Campos anonimos para las estructuras)
 ###### SINTAXIS
@@ -342,6 +357,9 @@ func (this Tutor) hablar() string {
     return "El Tutor dice: andale la osa!!!, pero el Humano dice: " + this.Human.hablar()
 }
 ```
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_15_1.go)*
 
 ## CAPITULO 16 (Interfaces)
 ###### SINTAXIS
@@ -384,6 +402,10 @@ func auth(user User) string{
 * Se puede utilizar estructuras como interfaces, para obtener polimorfismo :P 
 * Se puede trabajar con arreglos/slices con elementos del tipo de la interfaz (polimorfismo)
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_16_1.go)*
+
+
 ## CAPITULO 17 (GO Routines / ejecuciones corruntes / Threads en java)
 ###### SINTAXIS
 * go [nombre_funcion([parametros_de_funcion])]
@@ -422,6 +444,9 @@ for var_index,var_element := range(var_array) {
 time.Sleep(1000 + time.Millisecond)
 ```
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_17_1.go)*
+
 ## CAPITULO 18 (GO Channels)
 ###### SINTAXIS
 * make(chan [tipo_de_dato])
@@ -443,6 +468,9 @@ fmt.Println(msg)
 * Forma de enviar:  [canal] <- [dato]
 * Forma de recibir: [var_recibiendo] = <- [canal]
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_18_1.go)*
+
 ## CAPITULO 19 (Leer Archivos V1 | Libreria "io/ioutil")
 ###### SINTAXIS
 * [variable_con_informacion_en_bytes],[error] = ioutil.ReadFile([path_del_archivo])
@@ -455,6 +483,9 @@ if err == nil {
 * Si [error] es distinto de nil entonces se produjo un error
 * Abre el archivo y carga el contenido del mismo en memoria (usar solo para archivos chicos)
 * La informacion recibida esta en bytes, es necesario convertir la informacion
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_19_1.go)*
 
 ## CAPITULO 20 (Leer Archivos V2 | Librerias: "bufio", "os")
 ###### SINTAXIS
@@ -474,6 +505,9 @@ if err == nil {
 ```
 * Es necesario abrir y cerrar el archivo
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_20_1.go)*
+
 ## CAPITULO 21 (Defer)
 ###### SINTAXIS
 * defer [nombre_func(parametros_func)]
@@ -492,6 +526,9 @@ defer func() {
 * Sirve para asegurarse de que siempre se ejecute una linea de codigo.
 * Similar al funcionamiento del finally (un poco similar)
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_21_1.go)*
+
 ## CAPITULO 22 (Panic y Recover)
 ###### SINTAXIS
 * panic(err_value)
@@ -506,6 +543,9 @@ defer func() {
   * Se utiliza para detener un panic(), se puede utilizar junto con el "defer"
   * Permite recuperarte del pnic y continuar la ejecucion a partir del lugar que precises
   *Similar a un catch?
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_22_1.go)*
 
 ## CAPITULO 23 (WEB / net/http, io)
 * Sintaxis 1
@@ -539,6 +579,9 @@ func nombre_de_la_funcion(w http.ResponseWriter, r *http.Request){
 * http.ListenAndServe(":8080", nil)
   * Si no hay nada antes de los ":" se toma como localhost, luego viene el puerto
   * En el segundo parametro es nil para que se utilicen los manejadores definidos con http.HandlerFunc(...)
+
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_23_1.go)*
 
 ## CAPITULO 24 (WEB / Servir un archivo y un directorio)
 * Sintaxis 1
@@ -575,6 +618,10 @@ http.Handle("/", http.StripPrefix("/", fileServer) )
 http.ListenAndServe(":8080", nil)
 ```
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_24_1.go)*
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_24_2.go)*
+
 ## CAPITULO 25 (JSON / "encoding/json")
 *  json.NewEncoder( un variable del tipo http.ResponseWriter).Encode( var_tipo_struct )
 * Por convension de GO con respecto a JSON, los campos de un struct con nombres que comiencen con minusculas no se tienen en cuenta.
@@ -603,6 +650,9 @@ cursos := Cursos{
 }
 ```
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_25_1.go)*
+
 ## CAPITULO 26 (Creacion de packages LOCALES) 
 ###### SINTAXIS
 * Crear directorio con el nombre del package a crear
@@ -618,3 +668,5 @@ cursos := Cursos{
 * Atributos publicos --> El nombre comienza con mayuscula
 
 
+###### EJEMPLOS
+* :computer: *[slices](https://github.com/miguefitkd/git-go-1/blob/master/go_26_1.go)*
