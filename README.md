@@ -21,7 +21,6 @@
 * url: https://golang.org/
 * Descargar el ejecutable. Instalarlo.
 * Una alternativa es la consola online. Tiene ciertas limitaciones obviamente.
-* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_2_1.go)*
 
 ###### SINTAXIS
 * Debe existir el "package main"
@@ -38,6 +37,9 @@
 ###### EJECUTAR :running:
 * Windows(consola): [nombre_archivo].exe
 * Linux(consola): ./[nombre_archivo]
+
+###### EJEMPLOS
+* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_2_1.go)*
 
 ## CAPITULO 3 - VARIABLES
 * Lenguaje fuertemente tipeado. El tipo de dato de una variable no cambia.
@@ -59,6 +61,9 @@ x := 23
 ###### CORRER DIRECTAMENTE
 * go run [nombre_archivo].go
 
+###### EJEMPLOS
+* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_3_1.go)*
+
 ## CAPITULO 4 (Conversion de tipos, casteos)
 ###### SINTAXIS
 * Importar multiples paquetes (tambien se pueden declarar de forma individual)
@@ -79,6 +84,9 @@ import(
   * CODIGO ---> fmt.Println("Mi edad es: " + edad)
   * ERROR ----> (type untyped string) as type int
   * SOLUCION -> edad_str := strconv.Itoa( edad )
+
+###### EJEMPLOS
+* :computer: *[hola mundo](https://github.com/miguefitkd/git-go-1/blob/master/go_4_1.go)*
 
 ## CAPITULO 5 (Leer e imprimir datos)
 ###### SINTAXIS
