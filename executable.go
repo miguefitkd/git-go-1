@@ -2,6 +2,9 @@ package main
 
 import (
 	"github.com/miguefitkd/git_go/curso1"
+	"github.com/miguefitkd/git_go/patrones/builder/execute_builder"
+	"github.com/miguefitkd/git_go/patrones/factory/execute_factory"
+	"github.com/miguefitkd/git_go/patrones/singleton/execute_singleton"
 	"github.com/miguefitkd/git_go/pruebas1"
 )
 
@@ -36,4 +39,9 @@ func main() {
 
 	pruebas1.ExecuteGoConEj1()
 	pruebas1.ExecuteGoConEj2()
+
+	// Patterns...
+	_ = execute_singleton.ExecuteSingleton()
+	_ = execute_factory.ExecuteFactory()
+	_ = execute_builder.ExecuteBuilder()
 }

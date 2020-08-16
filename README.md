@@ -368,8 +368,8 @@ func (this Tutor) hablar() string {
   * Es un tipo de dato.
 ```go
 type nombre_interface  interface {
-    nombre_metodo]() tipo_de_dato_devuelto
-    nombre_metodo]() tipo_de_dato_devuelto
+    [nombre_metodo]() tipo_de_dato_devuelto
+    [nombre_metodo]() tipo_de_dato_devuelto
 }
 
 type User  interface {
